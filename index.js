@@ -31,6 +31,10 @@ function StringTest(string) {
 // bài 5
 // Khai báo một biến person kiểu Tuple, chứa thông tin về tên và tuổi của một người
 const persons = ["Bình", 20];
-// bài 6
-// Định nghĩa một Type Alias cho kiểu dữ liệu Coordinates là một Tuple chứa hai số thực,
-// tương ứng với vị trí (latitude, longitude).
+const Coordinates = [2.7, 3.5];
+function Product(product) {
+    const [productName, price, quantity] = product;
+    return price * quantity;
+}
+const productInput1 = ["quần thun", 20000, 10];
+console.log(Product(productInput1));

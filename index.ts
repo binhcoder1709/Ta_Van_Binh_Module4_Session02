@@ -1,5 +1,9 @@
-// đề 2
+// đề 1
 // bài 1
+// Viết một hàm getShippingCost nhận một quốc gia và trả về chi phí vận chuyển:
+// "VN": 10000
+// "US": 20000
+// "UK": 30000
 type NationalType = "VN" | "US" | "UK";
 
 function ChooseNational(national: NationalType): number {
@@ -62,4 +66,27 @@ type Latitude = number;
 type Longitude = number;
 const Coordinates: [Latitude, Longitude] = [2.7, 3.5];
 
-// bài 7
+// bài 7 (chưa xong)
+// Định nghĩa một Type Alias cho kiểu dữ liệu HTTPMethod là một Literal Type,
+// chỉ có thể nhận giá trị là "GET", "POST", "PUT" hoặc "DELETE".
+type HTTPMethod = "GET" | "POST" | "PUT" | "DELETE";
+
+// bài 8
+// Viết một hàm nhận vào một Tuple chứa thông tin về một mặt hàng (tên, giá, số lượng).
+// Tính tổng tiền dựa trên giá và số lượng.
+type ProductTuples = [string, number, number];
+function Product(product: ProductTuples): number {
+  const [productName, price, quantity] = product;
+  return price * quantity;
+}
+
+const productInput1: ProductTuples = ["quần thun", 20000, 10];
+console.log(Product(productInput1));
+
+// bài 9
+// Định nghĩa một Type Alias cho kiểu dữ liệu ResponseStatus,
+// là một Literal Type với giá trị "success" hoặc "error",
+// kèm theo một thuộc tính message kiểu chuỗi.
+type ResponseLiteral = "success" | "error";
+type SuccessAlias = string;
+type ErrorAlias = string;
